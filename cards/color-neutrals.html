@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Neutrals — Cream & Wood" subtitle="クリーム・木目・インクのニュートラル" -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; background: var(--ivory); }
+  .row { display: flex; gap: 0; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--hairline); }
+  .sw { flex: 1; height: 96px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px 10px; font-family: var(--font-sans); }
+  .sw b { font-size: 11px; font-weight: 700; }
+  .sw span { font-size: 10px; opacity: 0.75; font-variant-numeric: tabular-nums; }
+  .light b, .light span { color: var(--ink-900); }
+  .dark b, .dark span { color: var(--ivory); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw light" style="background:var(--ivory)"><b>ivory</b><span>#FFFDF8</span></div>
+    <div class="sw light" style="background:var(--cream)"><b>cream</b><span>#FAF4EA</span></div>
+    <div class="sw light" style="background:var(--sand)"><b>sand</b><span>#F3E8D6</span></div>
+    <div class="sw light" style="background:var(--wood-200)"><b>wood-200</b><span>#E0C9A8</span></div>
+    <div class="sw dark" style="background:var(--wood-400)"><b>wood-400</b><span>#BC925E</span></div>
+    <div class="sw dark" style="background:var(--wood-600)"><b>wood-600</b><span>#8A5A38</span></div>
+    <div class="sw dark" style="background:var(--ink-700)"><b>ink-700</b><span>#4A3D2E</span></div>
+    <div class="sw dark" style="background:var(--ink-900)"><b>ink-900</b><span>#2B2117</span></div>
+  </div>
+</body>
+</html>

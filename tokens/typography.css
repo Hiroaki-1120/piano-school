@@ -1,0 +1,45 @@
+/* おとなりピアノ — Typography tokens */
+:root {
+  /* ---- Families ----
+     Display: warm rounded gothic. Body/UI: clean modern gothic. */
+  --font-display: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN", sans-serif;
+  --font-sans:    "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --font-mono:    "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  /* ---- Type scale (px-based, comfortable for JP) ---- */
+  --text-xs:    12px;
+  --text-sm:    14px;
+  --text-base:  16px;
+  --text-md:    18px;
+  --text-lg:    20px;
+  --text-xl:    24px;
+  --text-2xl:   30px;
+  --text-3xl:   38px;
+  --text-4xl:   48px;
+  --text-5xl:   60px;
+
+  /* ---- Line heights ---- */
+  --leading-tight:   1.25;
+  --leading-snug:    1.4;
+  --leading-normal:  1.7;   /* JP body wants generous leading */
+  --leading-relaxed: 1.9;
+
+  /* ---- Letter spacing (JP reads better with a touch) ---- */
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0.01em;
+  --tracking-wide:   0.04em;
+
+  /* ---- Semantic roles ---- */
+  --text-display:   var(--text-4xl);
+  --text-h1:        var(--text-3xl);
+  --text-h2:        var(--text-2xl);
+  --text-h3:        var(--text-xl);
+  --text-body:      var(--text-base);
+  --text-caption:   var(--text-sm);
+}

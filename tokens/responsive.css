@@ -1,0 +1,56 @@
+/* おとなりピアノ — レスポンシブ（スマホ・タブレット対応）
+   インラインのレイアウトをクラス＋メディアクエリで上書きする。 */
+
+/* ===== タブレット以下：2カラム→1カラム ===== */
+@media (max-width: 900px) {
+  .op-listing-grid,
+  .op-map-grid,
+  .op-detail-grid { grid-template-columns: 1fr !important; }
+
+  .op-listing-aside,
+  .op-detail-aside,
+  .op-map-canvas { position: static !important; }
+
+  .op-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ===== スマホ：すべて1カラム＋余白・文字を縮小 ===== */
+@media (max-width: 640px) {
+  :root {
+    --text-5xl: 38px;
+    --text-4xl: 31px;
+    --text-3xl: 26px;
+    --text-2xl: 22px;
+    --text-xl:  19px;
+    --space-24: 56px;
+    --space-20: 44px;
+    --space-16: 36px;
+    --space-12: 32px;
+  }
+
+  .op-hero-grid,
+  .op-grid-3,
+  .op-form-row,
+  .op-pricing-grid { grid-template-columns: 1fr !important; }
+
+  /* ヒーロー画像はスマホでは低めに */
+  .op-hero-photo { height: 200px !important; }
+
+  /* 料金のおすすめプランの飛び出しを解除 */
+  .op-pricing-grid > div { transform: none !important; }
+
+  /* ヘッダー */
+  .op-header-inner { height: 60px !important; padding: 0 16px !important; gap: 8px !important; }
+  .op-brand-text { display: none !important; }
+  .op-nav { gap: 2px !important; }
+  .op-nav-link { padding: 6px 8px !important; font-size: 13px !important; }
+  .op-cta { padding: 8px 12px !important; font-size: 12px !important; margin-left: 4px !important; }
+
+  /* 詳細ページのギャラリーを1枚積みに */
+  .op-gallery-grid { grid-template-columns: 1fr !important; grid-template-rows: auto !important; height: auto !important; }
+  .op-gallery-grid > div { height: 200px !important; grid-row: auto !important; }
+
+  /* 地図キャンバスの高さを抑える */
+  .op-map-canvas { height: 360px !important; }
+  .op-map-list { max-height: none !important; overflow: visible !important; }
+}

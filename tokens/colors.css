@@ -1,0 +1,82 @@
+/* おとなりピアノ — Color tokens
+   Warm cream + wood neutrals, clay-terracotta primary, honey accent.
+   Base ramps first, semantic aliases at the bottom. */
+:root {
+  /* ---- Cream / surface neutrals ---- */
+  --ivory:      #FFFDF8;   /* cards, raised surfaces */
+  --cream:      #FAF4EA;   /* page background */
+  --sand:       #F3E8D6;   /* sunken fills, hover wash */
+  --linen:      #ECDFC9;   /* subtle dividers on cream */
+
+  /* ---- Wood accents ---- */
+  --wood-200:   #E0C9A8;
+  --wood-400:   #BC925E;
+  --wood-600:   #8A5A38;   /* deep wood — decorative headings */
+
+  /* ---- Hairlines / borders ---- */
+  --hairline:   #E7DBC6;
+  --hairline-strong: #D8C8AC;
+
+  /* ---- Ink (warm near-blacks) ---- */
+  --ink-900:    #2B2117;   /* primary text */
+  --ink-700:    #4A3D2E;   /* secondary text */
+  --ink-500:    #7A6A55;   /* muted text, captions */
+  --ink-300:    #A99B86;   /* placeholder, disabled */
+
+  /* ---- Clay / terracotta (primary) ---- */
+  --clay-50:    #F8EADF;
+  --clay-100:   #F0D3C0;
+  --clay-300:   #DB9B73;
+  --clay-500:   #C2683E;   /* primary actions */
+  --clay-600:   #A8552F;   /* hover */
+  --clay-700:   #8C4525;   /* press / deep */
+
+  /* ---- Honey / amber (accent) ---- */
+  --honey-100:  #FBEFD3;
+  --honey-400:  #E8B257;
+  --honey-500:  #DE9F3A;   /* stars, highlights */
+
+  /* ---- Sage (calm secondary) ---- */
+  --sage-100:   #E6ECDF;
+  --sage-500:   #6E8B5E;
+  --sage-700:   #51694A;
+
+  /* ---- Semantic raw ---- */
+  --green-500:  #5C8A52;
+  --amber-500:  #D8902F;
+  --red-500:    #C2503E;
+  --blue-500:   #4A7A9B;
+
+  /* ============ Semantic aliases ============ */
+  --color-bg:            var(--cream);
+  --color-surface:       var(--ivory);
+  --color-surface-sunken:var(--sand);
+  --color-border:        var(--hairline);
+  --color-border-strong: var(--hairline-strong);
+
+  --color-text:          var(--ink-900);
+  --color-text-muted:    var(--ink-500);
+  --color-text-subtle:   var(--ink-700);
+  --color-text-on-primary: var(--ivory);
+
+  --color-primary:       var(--clay-500);
+  --color-primary-hover: var(--clay-600);
+  --color-primary-press: var(--clay-700);
+  --color-primary-soft:  var(--clay-50);
+  --color-primary-border:var(--clay-100);
+
+  --color-accent:        var(--honey-500);
+  --color-star:          var(--honey-400);
+  --color-link:          var(--clay-600);
+
+  --color-secondary:     var(--sage-500);
+  --color-secondary-soft:var(--sage-100);
+
+  --color-success:       var(--green-500);
+  --color-warning:       var(--amber-500);
+  --color-danger:        var(--red-500);
+  --color-info:          var(--blue-500);
+
+  /* focus ring */
+  --color-focus:         var(--clay-500);
+}

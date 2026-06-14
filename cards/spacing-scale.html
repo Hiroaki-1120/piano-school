@@ -1,0 +1,28 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing scale" subtitle="4pxグリッド" -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--ivory); font-family: var(--font-sans); }
+  .row { display: flex; align-items: flex-end; gap: 14px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: var(--clay-300); border-radius: var(--radius-sm); width: 100%; }
+  .item .box { width: 28px; display: flex; flex-direction: column; align-items: center; }
+  .lbl { font-size: 10px; color: var(--ink-500); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box"><div class="bar" style="height:8px"></div></div><span class="lbl">2 · 8</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:12px"></div></div><span class="lbl">3 · 12</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:16px"></div></div><span class="lbl">4 · 16</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:24px"></div></div><span class="lbl">6 · 24</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:32px"></div></div><span class="lbl">8 · 32</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:48px"></div></div><span class="lbl">12 · 48</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:64px"></div></div><span class="lbl">16 · 64</span></div>
+    <div class="item"><div class="box"><div class="bar" style="height:80px"></div></div><span class="lbl">20 · 80</span></div>
+  </div>
+</body>
+</html>

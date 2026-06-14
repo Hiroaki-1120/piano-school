@@ -18,8 +18,8 @@ function SiteFooter({ onNav }) {
   return (
     <footer style={{ background: "var(--ink-900)", color: "var(--cream)", marginTop: "var(--space-24)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--space-16) var(--space-6) var(--space-10)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "var(--space-8)" }}>
-          <div>
+        <div className="op-footer-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "var(--space-8)" }}>
+          <div className="op-footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <img src={(window.__resources && window.__resources.logoMark) || "../../assets/logo-mark.svg"} alt="" style={{ height: 44 }} />
               <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 22, color: "var(--cream)" }}>おとなりピアノ</span>
@@ -39,7 +39,7 @@ function SiteFooter({ onNav }) {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: "var(--space-12)", paddingTop: "var(--space-6)", borderTop: "1px solid rgba(255,255,255,0.12)", display: "flex", justifyContent: "space-between", fontSize: "var(--text-xs)", color: "var(--wood-200)" }}>
+        <div className="op-footer-bottom" style={{ marginTop: "var(--space-12)", paddingTop: "var(--space-6)", borderTop: "1px solid rgba(255,255,255,0.12)", display: "flex", justifyContent: "space-between", fontSize: "var(--text-xs)", color: "var(--wood-200)" }}>
           <span>© 2026 おとなりピアノ</span>
           <span style={{ display: "flex", gap: "var(--space-5)" }}>
             <a href="#" style={{ color: "var(--wood-200)" }}>利用規約</a>

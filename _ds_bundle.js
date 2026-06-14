@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":3,"namespace":"PianoSchool_f8945d","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"RatingStars","sourcePath":"components/core/RatingStars.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Avatar","sourcePath":"components/data/Avatar.jsx"},{"name":"Card","sourcePath":"components/data/Card.jsx"},{"name":"StudioCard","sourcePath":"components/data/StudioCard.jsx"},{"name":"Tabs","sourcePath":"components/data/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/disclosure/Accordion.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"bcaf452cf56d","components/core/Button.jsx":"19694822ceff","components/core/IconButton.jsx":"3978390faf99","components/core/RatingStars.jsx":"537edc6b121d","components/core/Tag.jsx":"94185b5fb2e2","components/data/Avatar.jsx":"b12a58f58318","components/data/Card.jsx":"c123552d26ae","components/data/StudioCard.jsx":"7b3630e7d97f","components/data/Tabs.jsx":"54b0ccef73be","components/disclosure/Accordion.jsx":"edfeceef1c14","components/forms/Checkbox.jsx":"27cec672eac0","components/forms/Input.jsx":"6c3ed3ce24a9","components/forms/Select.jsx":"61c07b62d8e5","components/forms/Textarea.jsx":"688f1741a77a","explorations/design-canvas.jsx":"bd8746af6e58","ui_kits/website/DetailScreen.jsx":"dbd4352780e6","ui_kits/website/FaqScreen.jsx":"1da861e01925","ui_kits/website/HomeScreen.jsx":"a9366e02bdd9","ui_kits/website/ListingScreen.jsx":"834bf6026937","ui_kits/website/MapScreen.jsx":"ac1e580f5104","ui_kits/website/PricingScreen.jsx":"d67fc119c9d7","ui_kits/website/SignupScreen.jsx":"535c7e32903b","ui_kits/website/SiteFooter.jsx":"5bca2ac5b37b","ui_kits/website/SiteHeader.jsx":"0c93f9da7dd1","ui_kits/website/data.js":"150ac02dd59f"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":3,"namespace":"PianoSchool_f8945d","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"RatingStars","sourcePath":"components/core/RatingStars.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Avatar","sourcePath":"components/data/Avatar.jsx"},{"name":"Card","sourcePath":"components/data/Card.jsx"},{"name":"StudioCard","sourcePath":"components/data/StudioCard.jsx"},{"name":"Tabs","sourcePath":"components/data/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/disclosure/Accordion.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Textarea","sourcePath":"components/forms/Textarea.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"bcaf452cf56d","components/core/Button.jsx":"19694822ceff","components/core/IconButton.jsx":"3978390faf99","components/core/RatingStars.jsx":"537edc6b121d","components/core/Tag.jsx":"94185b5fb2e2","components/data/Avatar.jsx":"b12a58f58318","components/data/Card.jsx":"c123552d26ae","components/data/StudioCard.jsx":"7b3630e7d97f","components/data/Tabs.jsx":"54b0ccef73be","components/disclosure/Accordion.jsx":"edfeceef1c14","components/forms/Checkbox.jsx":"27cec672eac0","components/forms/Input.jsx":"6c3ed3ce24a9","components/forms/Select.jsx":"61c07b62d8e5","components/forms/Textarea.jsx":"688f1741a77a","explorations/design-canvas.jsx":"bd8746af6e58","ui_kits/website/DetailScreen.jsx":"dbd4352780e6","ui_kits/website/FaqScreen.jsx":"1da861e01925","ui_kits/website/HomeScreen.jsx":"a9366e02bdd9","ui_kits/website/ListingScreen.jsx":"834bf6026937","ui_kits/website/MapScreen.jsx":"ac1e580f5104","ui_kits/website/PricingScreen.jsx":"d67fc119c9d7","ui_kits/website/SignupScreen.jsx":"535c7e32903b","ui_kits/website/SiteFooter.jsx":"6ca8fd7927cf","ui_kits/website/SiteHeader.jsx":"8663b87e66b6","ui_kits/website/data.js":"150ac02dd59f"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -4115,12 +4115,15 @@ function SiteFooter({
       padding: "var(--space-16) var(--space-6) var(--space-10)"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    className: "op-footer-grid",
     style: {
       display: "grid",
       gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
       gap: "var(--space-8)"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "op-footer-brand"
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "center",
@@ -4180,6 +4183,7 @@ function SiteFooter({
       fontFamily: "var(--font-sans)"
     }
   }, it.label))))))), /*#__PURE__*/React.createElement("div", {
+    className: "op-footer-bottom",
     style: {
       marginTop: "var(--space-12)",
       paddingTop: "var(--space-6)",
@@ -4226,12 +4230,17 @@ function SiteHeader({
     key: "pricing",
     label: "掲載料金"
   }];
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const handle = key => {
+    setMenuOpen(false);
+    onNav(key);
+  };
   return /*#__PURE__*/React.createElement("header", {
     style: {
       position: "sticky",
       top: 0,
       zIndex: 50,
-      background: "rgba(255,253,248,0.88)",
+      background: "rgba(255,253,248,0.92)",
       backdropFilter: "blur(10px)",
       borderBottom: "1px solid var(--hairline)"
     }
@@ -4247,7 +4256,7 @@ function SiteHeader({
       justifyContent: "space-between"
     }
   }, /*#__PURE__*/React.createElement("button", {
-    onClick: () => onNav("home"),
+    onClick: () => handle("home"),
     style: {
       background: "none",
       border: "none",
@@ -4283,7 +4292,7 @@ function SiteHeader({
   }, nav.map(n => /*#__PURE__*/React.createElement("button", {
     key: n.key,
     className: "op-nav-link",
-    onClick: () => onNav(n.key),
+    onClick: () => handle(n.key),
     style: {
       background: "none",
       border: "none",
@@ -4298,7 +4307,7 @@ function SiteHeader({
     }
   }, n.label)), /*#__PURE__*/React.createElement("button", {
     className: "op-cta",
-    onClick: () => onNav("signup"),
+    onClick: () => handle("signup"),
     style: {
       marginLeft: 8,
       background: "var(--color-primary)",
@@ -4310,9 +4319,72 @@ function SiteHeader({
       fontSize: "var(--text-sm)",
       fontWeight: 700,
       padding: "10px 18px",
+      boxShadow: "var(--shadow-sm)",
+      whiteSpace: "nowrap"
+    }
+  }, "\u7121\u6599\u3067\u63B2\u8F09\u3059\u308B")), /*#__PURE__*/React.createElement("button", {
+    className: "op-menu-btn",
+    "aria-label": "\u30E1\u30CB\u30E5\u30FC",
+    onClick: () => setMenuOpen(v => !v),
+    style: {
+      display: "none",
+      alignItems: "center",
+      justifyContent: "center",
+      width: 44,
+      height: 44,
+      flex: "none",
+      background: "var(--ivory)",
+      border: "1px solid var(--hairline-strong)",
+      borderRadius: "var(--radius-md)",
+      cursor: "pointer",
+      color: "var(--ink-900)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 22,
+      lineHeight: 1
+    }
+  }, menuOpen ? "✕" : "≡"))), menuOpen && /*#__PURE__*/React.createElement("div", {
+    className: "op-mobile-menu",
+    style: {
+      display: "none",
+      flexDirection: "column",
+      gap: "var(--space-1)",
+      padding: "var(--space-3) var(--space-5) var(--space-5)",
+      borderTop: "1px solid var(--hairline)",
+      background: "var(--ivory)"
+    }
+  }, nav.map(n => /*#__PURE__*/React.createElement("button", {
+    key: n.key,
+    onClick: () => handle(n.key),
+    style: {
+      background: "none",
+      border: "none",
+      textAlign: "left",
+      cursor: "pointer",
+      fontFamily: "var(--font-sans)",
+      fontSize: "var(--text-md)",
+      fontWeight: current === n.key ? 700 : 500,
+      color: current === n.key ? "var(--clay-600)" : "var(--ink-900)",
+      padding: "14px 8px",
+      borderRadius: "var(--radius-md)"
+    }
+  }, n.label)), /*#__PURE__*/React.createElement("button", {
+    onClick: () => handle("signup"),
+    style: {
+      marginTop: "var(--space-2)",
+      background: "var(--color-primary)",
+      color: "var(--ivory)",
+      border: "none",
+      borderRadius: "var(--radius-md)",
+      cursor: "pointer",
+      fontFamily: "var(--font-sans)",
+      fontSize: "var(--text-base)",
+      fontWeight: 700,
+      padding: "14px 18px",
       boxShadow: "var(--shadow-sm)"
     }
-  }, "\u7121\u6599\u3067\u63B2\u8F09\u3059\u308B"))));
+  }, "\u7121\u6599\u3067\u63B2\u8F09\u3059\u308B")));
 }
 window.SiteHeader = SiteHeader;
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/website/SiteHeader.jsx", error: String((e && e.message) || e) }); }
